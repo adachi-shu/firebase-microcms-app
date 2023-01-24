@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "test-fb461"
+  },
+  "targets": {
+    "test-fb461": {
+      "hosting": {
+        "ssr": [
+          "test-fb461"
+        ],
+        "ssg": [
+          "export-936e5"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
