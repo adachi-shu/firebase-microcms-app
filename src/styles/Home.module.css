@@ -1,3 +1,10 @@
+/* 追記 */
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+/* 追記　終わり */
+
 .main {
   display: flex;
   flex-direction: column;

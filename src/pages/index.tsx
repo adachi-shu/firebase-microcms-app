@@ -5,6 +5,8 @@ import {
 } from "next";
 import { client } from "../libs/client";
 import type {BlogData} from "../types/blog";
+import '../styles/Home.module.css'
+
 
 type Props = {
   blog: BlogData[]
@@ -18,7 +20,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <div>
         <ul>
           {blog.map((blog) => (
-            <li key={blog.id}>
+            <li key={blog.id} className="text-3xl font-bold underline text-blue-700">
               <Link href={`/blog/${blog.id}`}>
                 {blog.title}
               </Link>
