@@ -5,7 +5,9 @@ import {
 } from "next";
 import { client } from "../libs/client";
 import type {BlogData} from "../types/blog";
-import '../styles/Home.module.css'
+import '../styles/Home.module.css';
+import Image from "next/image";
+import img from "../public/img.png";
 
 
 type Props = {
@@ -18,6 +20,10 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <main>
       <div>
+        <Image
+          src={img}
+          alt="test img"
+        />
         <ul>
           {blog.map((blog) => (
             <li key={blog.id} className="text-3xl font-bold underline text-blue-700">
