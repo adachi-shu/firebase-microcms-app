@@ -20,12 +20,12 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <main>
       <div>
-        <img src="https://images.microcms-assets.io/assets/cc0f7e4c81e941aaacbb43685affa6aa/7558d995934b43e988afc4bf4c7678b9/img.png"/>
         <ul>
           {blog.map((blog) => (
             <li key={blog.id} className="text-3xl font-bold underline text-blue-700">
               <Link href={`/blog/${blog.id}`}>
                 {blog.title}
+                <img src={blog.img.url}/>
               </Link>
             </li>
           ))}
