@@ -25,7 +25,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <li key={blog.id} className="text-3xl font-bold underline text-blue-700">
               <Link href={`/blog/${blog.id}`}>
                 {blog.title}
-                <img src={blog.img.url}/>
+                <img src={blog.img.url} className="w-11"/>
               </Link>
             </li>
           ))}

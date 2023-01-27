@@ -7,9 +7,14 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
+
+    //tailwind plugin
+    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin")
+  ],
 }
