@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Zen_Kaku_Gothic_Antique } from "@next/font/google";
+import { Noto_Sans_JP } from "@next/font/google";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -13,6 +14,11 @@ const ZenKakuGothicAntique_bold = Zen_Kaku_Gothic_Antique({
   subsets: ["cyrillic"],
 });
 
+const NotoSansJP_normal = Noto_Sans_JP({
+  weight: "400",
+  subsets: ["latin"]
+})
+
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -20,8 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>{`
         html {
-         font-family: ${ZenKakuGothicAntique_normal.style.fontFamily},
-           ${ZenKakuGothicAntique_bold};
+         font-family: ${NotoSansJP_normal.style.fontFamily};
        }
      `}</style>
      <Header></Header>

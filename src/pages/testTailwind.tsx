@@ -72,12 +72,16 @@ export default function Tailwind() {
           </p>
         </Card>
       </div>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+      <div className="h-72">
         <Carousel>
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-            alt="..."
-          />
+          <Card imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg">
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Noteworthy technology acquisitions 2021
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+            </p>
+          </Card>
           <img
             src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
             alt="..."
@@ -95,6 +99,48 @@ export default function Tailwind() {
             alt="..."
           />
         </Carousel>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        <div>
+          <Button className="bg-gradient-to-r from-blue-800 to-sky-400 hover:from-sky-400 hover:to-blue-800 border-none">
+            Info
+          </Button>
+        </div>
+        <div>
+          <Button className="bg-gradient-to-r from-blue-800 to-sky-400">
+            Success
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="cyan">
+            Cyan
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="teal">
+            Teal
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="lime">
+            Lime
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="failure">
+            Failure
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="pink">
+            Pink
+          </Button>
+        </div>
+        <div>
+          <Button gradientMonochrome="purple">
+            Purple
+          </Button>
+        </div>
       </div>
     </div>
   );
