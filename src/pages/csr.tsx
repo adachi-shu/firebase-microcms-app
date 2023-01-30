@@ -5,11 +5,12 @@ import { useRouter } from 'next/router';
 
 const fetcher = async (context: any) => {
   const {slug, draftKey} = context.query;
-  const data = await client.get({
-    endpoint: "blog",
-    contentId: slug,
-    queries: { draftKey: draftKey }
-  });
+  // const data = await client.get({
+  //   endpoint: "blog",
+  //   contentId: slug,
+  //   queries: { draftKey: draftKey }
+  // });
+  const {data} = await axios.get(`https://myblogadachi.microcms.io/api/v1/blog/${slug}?draftKey=${draftKey}`, {headers: {"X-MICROCMS-API-KEY": process.env.API_KEY}})
   return data;
 }
 
