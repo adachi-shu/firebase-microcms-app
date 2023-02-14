@@ -17,6 +17,7 @@ type Props = {
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   blog
 }: Props) => {
+  console.log(blog)
   return (
     <main>
       <div>
